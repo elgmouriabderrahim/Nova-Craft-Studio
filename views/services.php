@@ -7,7 +7,6 @@
   <title>NovaCraft Studio - Services</title>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <?php include  $_SERVER['DOCUMENT_ROOT'].'/templates/header.php';?>
 
   <section class="container mx-auto py-16">
     <h2 class="text-3xl font-bold mb-8 text-center">Nos Services</h2>
@@ -27,6 +26,5 @@
     </div>
   </section>
 
-  <?php require_once  $_SERVER['DOCUMENT_ROOT'].'/templates/footer.php';?>
 </body>
 </html>

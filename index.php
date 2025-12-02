@@ -9,7 +9,7 @@
   $page = $_GET['page'] ?? 'home';
   switch ($page) {
       case 'home':
-          $title = "NovaCraft Studio - Accueil";
+          $title = "welcome to home";
           $thispage = 'views/home.php';
           break;
 
@@ -32,7 +32,10 @@
           $title = "Not Found";
           $thispage = 'views/404.php';
   }
-  include "templates/layout.php"
+  if($thispage == 'views/404.php')
+    include "views/404.php";
+  else
+  include "templates/layout.php";
   ?>
 
 </body>
