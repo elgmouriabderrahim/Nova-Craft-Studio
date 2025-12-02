@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/build/output.css" rel="stylesheet">
-  <title>NovaCraft Studio - Accueil</title>
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <?php 
+  $page = $_GET['page'] ?? 'home';
+  switch ($page) {
+      case 'home':
+          $title = "NovaCraft Studio - Accueil";
+          $thispage = 'views/home.php';
+          break;
 
-  <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/templates/header.php';?>
+      case 'services':
+          $title = "NovaCraft Studio - Services";
+          $thispage = 'views/services.php';
+          break;
 
-  <section class="container mx-auto py-20 text-center">
-    <h2 class="text-4xl font-bold mb-6">Propulsez votre entreprise vers le digital</h2>
-    <p class="text-lg mb-8 text-gray-600">Création de sites Web, automatisation, solutions digitales sur mesure.</p>
-    <a href="./views/services.php" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700">Voir nos services</a>
-  </section>
-  
-  <?php require_once  $_SERVER['DOCUMENT_ROOT'].'/templates/footer.php';?>
+      case 'contact':
+          $title = "NovaCraft Studio - contact";
+          $thispage = 'views/contact.php';
+          break;
+
+      case 'about':
+          $title = "NovaCraft Studio - about us";
+          $thispage = 'views/about.php';
+          break;
+
+      default:
+          $title = "Not Found";
+          $thispage = 'views/404.php';
+  }
+  include "templates/layout.php"
+  ?>
+
 </body>
 </html>
