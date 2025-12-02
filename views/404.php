@@ -6,7 +6,7 @@
     <link href="/build/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body class="grid place-items-center">
     <h1>404 not found</h1>
 </body>
 </html>
