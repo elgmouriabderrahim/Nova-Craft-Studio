@@ -17,7 +17,16 @@
     }
     ?>
 
-    
+    <?php if (preg_match($name_regex, $name) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($message) >= 5): ?>
+        <div class="max-w-xl mx-auto bg-green-100 text-green-700 p-4 rounded mb-4">
+            <?php echo "Merci $name! Votre message a ete envoye avec succes."; ?>
+            <?php
+            $name = $email = $message = "";
+            $succes = true;
+            ?>
+
+        </div>
+    <?php endif; ?>
     <h2 class="text-3xl font-bold mb-6 text-center">Contactez-nous</h2>
 
     <form class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4" method="POST">
