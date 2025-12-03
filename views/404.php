@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/build/output.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body class="grid place-items-center">
-    <h1>404 not found</h1>
-</body>
-</html>
+<div class="grid place-items-center min-h-screen text-center">
+    <h1 class="text-4xl font-bold text-red-600">Oops!</h1>
+    <h2 class="text-xl mt-2">The page you are looking for was not found.</h2>
+    <div class="text-5xl font-bold mt-4">404</div>
+</div>
