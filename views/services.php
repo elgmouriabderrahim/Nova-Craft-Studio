@@ -1,20 +1,13 @@
+<?php
+require $_SERVER["DOCUMENT_ROOT"]."/data/services.php";?>
 <section class="container mx-auto py-16">
-    <h2 class="text-3xl font-bold mb-8 text-center">Nos Services</h2>
-
+    <h2 class="text-3xl font-bold mb-8 text-center"><?php echo count($services) === 0 ? "aucune Service disponible": "Nos Services"?></h2>
     <div class="grid md:grid-cols-3 gap-8">
+        <?php foreach($services as $service):?>
         <div class="bg-white p-6 shadow-md rounded-lg">
-            <h3 class="text-xl font-bold mb-2">Création de sites Web</h3>
-            <p class="text-gray-600">Sites vitrines, e-commerce, applications modernes.</p>
+            <h3 class="text-xl font-bold mb-2"><?php echo $service["title"]?></h3>
+            <p class="text-gray-600"><?php echo $service["content"]?></p>
         </div>
-
-        <div class="bg-white p-6 shadow-md rounded-lg">
-            <h3 class="text-xl font-bold mb-2">Développement sur mesure</h3>
-            <p class="text-gray-600">Outils internes, solutions métiers spécifiques.</p>
-        </div>
-
-        <div class="bg-white p-6 shadow-md rounded-lg">
-            <h3 class="text-xl font-bold mb-2">Automatisation & API</h3>
-            <p class="text-gray-600">Automatisation des tâches, intégration d'API.</p>
-        </div>
+        <?php endforeach; ?>
     </div>
 </section>
