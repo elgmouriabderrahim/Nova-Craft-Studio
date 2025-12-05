@@ -10,7 +10,7 @@
     ?>
     
     <h2 class="text-3xl font-bold mb-6 text-center">Contactez-nous</h2>
-    <form class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4" action="https://formspree.io/f/xqarlyaz" method="POST">
+    <form class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-lg space-y-4" action="<?php if($succes) echo 'https://formspree.io/f/xqarlyaz'?>" method="POST">
         <input type="text" name="name" placeholder="Votre nom" class="w-full border px-4 py-2 rounded-lg" value="<?php echo $name; ?>">
         <span class= 'text-red-500'>*</span>
         <?php if(!empty($_POST) && !preg_match($name_regex, $name) && !$succes)
